@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Dosya İşlemleri </title>
+
+    <link rel="stylesheet" href="main.css" />
+
+</head>
+
+<body>
+    <div id="logo"> </div>
+
+    <div class="navBar">
+        <ul>
+            <li><a href="index.html">Anasayfa</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">C++ Konuları</a>
+                <div class="dropdown-content">
+                    <a href="basla.html">Başlangıç</a>
+                    <a href="veritip.html">Veri Tipleri</a>
+                    <a href="dongu.html">Döngüler</a>
+                    <a href="diziler.html">Diziler</a>
+                    <a href="fonksiyonlar.html">Fonksiyonlar</a>
+                    <a href="dislemleri.html">Dosya İşlemleri</a>
+                </div>
+            </li>
+            <li><a href="hakkimda.html">Hakkımda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+    </div>
+   <div id="content-main">
+       <h3>Dosyalama İşlemleri</h3>
+       <p class="info">C++ ile dosya işlemleri yapabilmek için   
+        <span class="color-red">&quot;#include &lt;fstream&gt;&quot;</span> satırını eklememiz gerekir. Bu satır stream kütüphanesini programa dahil eder.</p>
+       <p class="info">C++ ile dosyaya yazı yazmak için <span class="color-red">&quot;ofstream&quot;</span> sınıfını kullanmak gerekir.  </p>
+       <p class="info">C++ ile yazılı olan bir dosyadan veri okumak için <span class="color-red">&quot;ifstream&quot;</span> sınıfını kullanmak gerekir.  </p>
+       <p class="info">Bu dosyalama işlemleri gerçekleştirmek için fiziksel olarak bir dosya oluşturmamız lazım.Dosya oluşturmak için<span class="color-red">&quot;open(dosyaadi,mod);&quot;</span><br>Burada mod dosyayı hangi amaç için açtığımız için gereklidir.</p>
+       <ul class="info">
+           <li>ios::in (Veri okuma modu)</li>
+           <li>ios::out (Veri yazma modu)</li>
+           <li>ios::app (Veri ekleme modu)</li>
+       </ul>
+       
+       <h2>Adımlar</h2>
+       <ul class="info">
+           <li>Önce seçeceğimiz sınıftan bir <span class="color-red">nesne</span> yaratıyoruz.</li>
+           <li>Bu nesneden <span class="color-red">open()</span> fonksiyonu kullanarak bir dosya oluşturuyoruz ve modunu belirliyoruz.</li>
+           <li>Dosya açma kalıbımız şu şekilde; <span class="color-red">Nesneİsmi.open(Dosyaİsmi, Mod)</span></li>
+           <li>İşlemlerimizi yapıyoruz.</li>
+           <li><span class="color-red">close()</span> fonksiyonunu kullanarak dosyamızı kapatıyoruz.</li>
+       </ul>
+       
+       <table class="table-program">
+            <col class="col-line-number" />
+            <col class="col-program" />
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="text-right">
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre>
+                    </td>
+                    <td>
+                        <pre>
+<span class="color-comment">/*
+ * Dosya işlemleri kayıt örneği (<em>DosyaIslemleriOfstream</em>.cpp)
+ */</span>
+<span class="color-include">#include &lt;iostream&gt; </span>
+<span class="color-include">#include &lt;fstream&gt; </span>
+
+<span class="bold">using namespace</span> std;
+
+<span class="bold">int</span> main<span class="color-red">() {</span>
+                    
+ofstream dosya1<span class="color-red">;</span>
+dosya1<span class="color-red">.</span>open<span class="color-red">(</span><span class="color-boldblue">&quot;isim.txt&quot;</span><span class="color-red">);</span>
+dosya1 <span class="color-red">&lt;&lt;</span> <span class="color-boldblue">&quot;Isım kayit dosyasi:\n&quot;</span><span class="color-red">;</span>
+dosya1<span class="color-red">.</span>close<span class="color-red">();</span><span class="color-comment"> // dosya kapatma</span>
+cout <span class="color-red">&lt;&lt;</span> <span class="color-boldblue">&quot;Dosyaya kayit yapildi&quot;</span><span class="color-red"> &lt;&lt;</span> endl<span class="color-red">;</span>
+system<span class="color-red">(</span><span class="color-boldblue">&quot;Pause&quot;</span><span class="color-red">);</span>                        
+return 0<span class="color-red">;                       
+}</span>            
+                               
+                      </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+ <p class="info">Kodun Çıktısı: </p>    
+        <pre class="output">
+Dosyaya kayit yapildi                       
+       </pre>      
+
+   
+      
+         
+               
+
+      
+       <table class="table-program">
+            <col class="col-line-number" />
+            <col class="col-program" />
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="text-right">
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre>
+                    </td>
+                    <td>
+                        <pre>
+<span class="color-comment">/*
+ * Dosya işlemleri okuma örneği (<em>DosyaIslemleriIfstream</em>.cpp)
+ */</span>
+<span class="color-include">#include &lt;iostream&gt; </span>
+<span class="color-include">#include &lt;fstream&gt; </span>
+<span class="color-include">#include &lt;string&gt; </span>
+
+<span class="bold">using namespace</span> std;
+string ad<span class="color-red">;</span> 
+
+<span class="bold">int</span> main<span class="color-red">() {</span>
+                    
+ifstream dosya1<span class="color-red">(</span><span class="color-boldblue">&quot;isimler.txt&quot;</span><span class="color-red">,</span>ios<span class="color-red">::</span>in<span class="color-red">);</span>
+<span class="bold">if</span><span class="color-red">(</span>dosya<span class="color-red">.</span>is_open<span class="color-red">())
+{</span>
+<span class="bold">do</span>
+<span class="color-red">{</span>
+dosya1 <span class="color-red">&gt;&gt;</span> ad<span class="color-red">;</span>
+cout <span class="color-red">&lt;&lt;</span> ad <span class="color-red">&lt;&lt;</span> endl<span class="color-red">;
+}</span> <span class="bold">while</span><span class="color-red">(!</span>dosya<span class="color-red">.</span>eof<span class="color-red">());</span><span class="color-comment">  // eof(EndOfFile) dosya sonuna kadar demek</span>
+dosya1<span class="color-red">.</span>close<span class="color-red">();</span>
+cout <span class="color-red">&lt;&lt;</span><span class="color-boldblue"> &quot;Dosyada adlar okundu&quot; </span><span class="color-red">&lt;&lt;</span> endl<span class="color-red">;</span>
+<span class="color-red">}</span>
+<span class="bold">else</span>
+cout <span class="color-red">&lt;&lt; </span><span class="color-boldblue">&quot;Dosya acilmadi&quot;</span><span class="color-red">;</span>
+system<span class="color-red">(</span><span class="color-boldblue">&quot;Pause&quot;</span><span class="color-red">);</span>                        
+return 0<span class="color-red">;                       
+}</span>            
+                               
+                      </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+ <p class="info">Kodun Çıktısı: </p>    
+        <pre class="output">
+ahmet
+mehmet
+ayse
+fatma
+Dosyada adlar okundu                      
+       </pre>               
+                        
+      
+      
+
+      
+
+                  
+       <table class="table-program">
+            <col class="col-line-number" />
+            <col class="col-program" />
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="text-right">
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+
+
+</pre>
+                    </td>
+                    <td>
+                        <pre>
+<span class="color-comment">/*
+ * Dosya işlemleri arama örneği (<em>DosyaIslemleriArama</em>.cpp)
+ */</span>
+<span class="color-include">#include &lt;iostream&gt; </span>
+<span class="color-include">#include &lt;fstream&gt; </span>
+<span class="color-include">#include &lt;string&gt; </span>
+
+<span class="bold">using namespace</span> std;
+string ad<span class="color-red">;</span> 
+
+<span class="bold">int</span> main<span class="color-red">() {</span>
+                    
+ifstream dosya1<span class="color-red">(</span><span class="color-boldblue">&quot;isimler.txt&quot;</span><span class="color-red">,</span>ios<span class="color-red">::</span>in<span class="color-red">);</span>
+string arananisim<span class="color-red">;</span>
+cout <span class="color-red">&lt;&lt;</span><span class="color-boldblue"> &quot;Aranacak isim: &quot; </span><span class="color-red">&lt;&lt;</span> endl<span class="color-red">;</span>
+cin <span class="color-red">&gt;&gt;</span> arananisim<span class="color-red">;</span>
+<span class="bold">if </span><span class="color-red">(</span>dosya1<span class="color-red">.</span>is_open<span class="color-red">()) {</span>
+<span class="bold">int</span> x<span class="color-red">=</span>0<span class="color-red">;</span>
+<span class="bold">do </span><span class="color-red">{</span>
+dosya1 <span class="color-red">&gt;&gt;</span> ad<span class="color-red">;</span>
+<span class="bold">if</span> <span class="color-red">(</span>ad<span class="color-red">==</span>arananisim<span class="color-red">) {</span>
+cout <span class="color-red">&lt;&lt;</span><span class="color-boldblue"> &quot;Aranan isim dosyada mevcuttur.&quot; </span><span class="color-red">&lt;&lt; </span>endl<span class="color-red">;</span> 
+x<span class="color-red">=</span>1<span class="color-red">;
+}</span><span class="bold"> while</span><span class="color-red">(!</span>dosya1<span class="color-red">.</span>eof<span class="color-red">());</span>
+dosya1<span class="color-red">.</span>close<span class="color-red">();</span>
+<span class="bold">if</span><span class="color-red">(</span>x <span class="color-red">==</span>0<span class="color-red">)</span>
+cout <span class="color-red">&lt;&lt;</span><span class="color-boldblue"> &quot;Dosyada aranan isim mevcut degil&quot; </span><span class="color-red">&lt;&lt;</span> endl<span class="color-red">;</span>
+<span class="color-red">}</span>
+<span class="bold">else</span>
+cout <span class="color-red">&lt;&lt; </span><span class="color-boldblue">&quot;Dosya acilmadi&quot;</span><span class="color-red">;</span>
+system<span class="color-red">(</span><span class="color-boldblue">&quot;Pause&quot;</span><span class="color-red">);</span>                        
+return 0<span class="color-red">;                       
+}</span>            
+                               
+                      </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+ <p class="info">Kodun Çıktısı: </p>    
+        <pre class="output">
+Aranacak isim: 
+nuri
+Aranan isim dosyada mevcut                     
+       </pre>                                                       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+       
+       
+       
+       
+   </div>
+
+
+
+
+
+
+
+
+    <div class="footer">
+        <p> Tüm Hakları Saklıdır. Lütfen Kaynak Göstermeden Sitenizde Kullanmayınız. © 2017 - Nuri MÜLDÜR</p>
+    </div>
+
+</body>
+
+</html>

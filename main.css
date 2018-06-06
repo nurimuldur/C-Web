@@ -1,0 +1,240 @@
+#logo{
+    height:120px;
+	width:100%px;
+	background-image: url("logo1.png");	
+	background-repeat:no-repeat;
+	/* background-color:#f7535b; */
+	background-position:left;
+	
+}
+body{
+   background-image: url("background.jpg");
+   background-repeat: round;
+   background-attachment: fixed;
+
+}
+
+/*#logo .kayanYazi marquee{
+    font-size: 70px;
+    margin-right:130px;
+}*/
+p {
+	margin-top: 0.6em;
+	margin-bottom: 0.4em;
+}
+
+.line-heading {
+	color: #444;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding: 0.2em 0;
+    font-family: 'Roboto'sans-serif;
+}
+.line-heading-code-new {
+	font-family: Consolas, "DejaVu Sans Mono", "Lucida Console", "Courier New", Courier, monospace;
+	color: #E31B23;
+	font-size: 15px;
+    font-weight: normal;
+/*	letter-spacing: 0.5px; */
+}
+#content-main {
+	margin: 0;
+	padding: 0px 0 20px 0;
+    
+}
+ul.info{
+    line-height: 24px;
+    margin:2.19% 10.24% 1% 2%;
+    font-family: "Segoe UI", Segoe, Calibri, "Nimbus Sans L", "Ubuntu", Tahoma, Arial, Helvetica, Verdana, sans-serif;
+    font-size: 16px;
+}
+h2{
+    margin-left: 1%;
+    font-size: 20px;
+	padding: 1.5em 0 0 0;
+    color:darkred;
+}
+h3{
+    margin-left: 1%;
+    font-size: 22px;
+	border-bottom: thin solid rgb(12, 155, 116);
+	padding: 1.5em 0 0.3em 0;
+    color:darkred;
+}
+h5 {
+    margin: 1%;
+	font-family: "Segoe UI", Segoe, "Nimbus Sans L", "Ubuntu", Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #444;
+	padding: 1.2em 0 0 0;  /* top right bottom left */
+	letter-spacing: 1px;
+}
+pre {
+	font-family: Consolas, "DejaVu Sans Mono", "Lucida Console", "Courier New", Courier, monospace;
+	     /* "DejaVu Sans Mono" for Ubuntu */
+	font-size: 13px;
+	margin: 5px 0 8px 0;
+	border: solid 2px #f8f8f8; 
+	padding: 5px 10px;
+	line-height: 135%;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align:left;
+}
+.text-center{
+    text-align:center;
+}
+.underline{
+    text-decoration: underline;
+}
+.bold{
+    font-weight: bold;
+}
+.color-boldblue{
+    color:blue;
+    font-weight: bold;
+}
+.color-red{
+    color: red;
+    font-weight: bold;
+}
+.color-comment{     
+    color: #019b7f;  /* blue */
+}
+.color-include {
+	color: #009900;  /* green */
+} 
+.color-new {
+	color: #E31B23;  /* dark red  */
+}
+.color-example {
+	background-color: rgb(215, 236, 211);
+}
+.float-clear {
+   clear: both;	
+}
+.font-code {
+	font-family: Consolas, "DejaVu Sans Mono", "Lucida Console", "Courier New", Courier, monospace;
+}
+.output {  /* Çıkış */
+    background-color: rgb(236, 246, 234);  
+	border: solid 2px #f8f8f8;   
+	padding: 4px 8px;
+}
+
+.navBar ul {
+    font-family: Consolas, "DejaVu Sans Mono", "Lucida Console", "Courier New", Courier, monospace;
+    list-style-type: none;
+    margin-top: 20px;
+    padding-top: 0px;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navBar li {
+    float: left;
+}
+
+li a,.dropbtn {
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown-content { 
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: crimson; /*#f1f1f1*/
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+li a:hover,.dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+ li.dropdown {
+     display: inline-block;}
+.firstinfo h2{
+    margin-left:20px;
+    color:darkred;
+}
+
+.firstinfo {
+    line-height: 24px;
+    border: 2px;
+    border-style:groove;
+    margin:2.19% 10.24% 0px 10.24%;
+    font-family: 'Roboto'sans-serif;
+    color:darkgreen;
+    font-size:20px;
+     }
+.info {
+    line-height: 24px;
+    margin:2.19% 10.24% 1% 2%;
+    font-family: "Segoe UI", Segoe, Calibri, "Nimbus Sans L", "Ubuntu", Tahoma, Arial, Helvetica, Verdana, sans-serif;
+    font-size: 16px;
+     }
+.cpp1 img{
+    margin:10px;
+    margin-left: 200px;   
+}
+.firstinfo ul{
+    font-size:20px;
+    color:darkgreen;
+    font-family: 'Roboto'sans-serif;
+    line-height: 24px;
+   /* border: 2px;
+    border-style:groove;
+    margin:2.19% 10.24% 3.66% 10.24%; */
+}
+.face img{
+	height:256px;
+	width:256px;
+	float:left;	
+}
+.twit img{
+    margin: 5px;
+	height:256px;
+	width:256px;
+    float:right; }
+.mail img{
+    margin-left:300px;
+    height: 256px;
+    width: 256px;
+    float:left;
+}
+
+.footer{
+    margin-top: 100px;
+	margin-bottom:10px;
+	font-family:Tahoma;
+	font-weight:bold;
+	font-size:11px;
+	text-align: center;
+    padding:50px 50px 0px 50px;}

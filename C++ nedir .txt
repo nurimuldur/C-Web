@@ -1,0 +1,32 @@
+C++, 1979 yýlýnda Bjarne Stroustrup tarafýndan Bell Labs’da geliþtirilen nesne yönelimli ve yüksek seviyeli, genel maksatlý programlama dilidir. C++’ýn ilk ismi “C with classes” dir ve C programlama dilinin bir eklentisi olarak iþlev görmektedir. 
+
+
+C++’ýn yaratýcýsý Bjarne Stroustrup bu programlama dilini öðrenciyken geliþtirmiþtir. Kullandýðý programlama dilllerini yeteri kadar hem iþlevli hem de yüksek performanslý görmeyen Stroustrup, kendi programlama dilini oluþturarak bilgisayar tarihinin en önemli yazýlým dillerinden birinin ortaya çýkmasýna yardýmcý olmuþtur. 
+
+
+C++ programlama dilinde C tarzýnda veya nesne yönelimli tarzda kesin senaryolarla kodlamalar yapýlabilmektedir. Bu açýdan C++ en önemli ve iþlevsel hibrit programlama dillerinden biri olma niteliðine de sahiptir. C++ programlama dilinin Türkçe’de telaffuzu “Si-Pýlas-Pýlas” þeklindedir.
+
+C++ Ne Ýþe Yarar
+
+C++ geliþtirilmesinden sonra tüm dünyada en yaygýn kullanýlan programlama dillerinden biri olmuþtur. Özellikle söz konusu performans olduðunda C++ daima ilk seçim olmaktadýr zira diðer programlama dilleriyle kýyaslandýðýnda C++ çok daha fazla güncellenen bir yazýlým dilidir. Son olarak C++ 11 sürümü 2011 yýlýnda yayýnlanmýþtýr.
+
+C++ yazýlým dili kullanýlarak geliþtiriciler tarafýndan sistem yazýlýmlarý, özel yazýlýmlar, uygulamalar, sürücü yazýlýmlarý, kullanýcý taraflý yazýlýmlar ve gömülü firmware yazýlýmlar üretilmektedir.  Bugün bilgisayarýnýzda kullanmakta olduðunuz birçok donanýmýn dahi sürücüsü C++ programlama dili sayesinde hazýrlanmýþ ve son kullanýcýlarýn kullanýmýna tahsis edilmiþtir.
+
+
+Neden C++ Öðrenmeliyim?
+C++ programlama dilini tercih etmenizin birçok sebebi olabilir ancak ben burada önemli gördüðüm avantajlarýný sizlerle paylaþacaðým. Ýþte C++ dilini seçmenin sebepleri;
+
+C++ dili genel amaçlý bir programlama dilidir. Ýsterseniz düþük seviyede kodlar isterseniz de yüksek seviye kodlar kullanarak programlama yapabilirsiniz.
+
+C++, doðrusal, yapýsal ayný zamanda da nesne tabanlý bir programlama tekniklerine imkân tanýr.
+
+Günümüzde ki güncel iþletim sistemi olan Windows, Linux, Mac OS gibi iþletim sistemleri C++ ile yazýlmýþtýr. Sürücüler veya donanýmlarla ilgili iletiþim kuran programlar yapýlacaksa en iyi tercih C++ dili olacaktýr.
+
+C++, en karmaþýk ve zorlu algoritmalarýn altýndan kolaylýkla kalkabilir. Tamamen nesne tabanlý ve modern bir programlama dilidir.
+
+C++ dili ile isterseniz düþük seviyede kod isterseniz de yüksek seviyede kodlar yazabilirsiniz. Yani isterseniz sadece donaným seviyesinde iþlemler dahi yapabilirsiniz. Buda size hem kolaylýk hem de büyük bir esneklik saðlayacaktýr.
+
+C++ günümüzdeki teknolojiye çok iyi bir þekilde ayak uydurmayý baþarmýþtýr ve C++ dilini kullanarak, hem donaným tabanlý mikro kontrolör uy hem de .NET teknolojisini kullanarak masaüstü, web ve mobil uygulamalar geliþtirebilirsiniz.
+
+C++ dilini kullanan büyük bir kitle vardýr. Buda sizlere hem çalýþma ve öðrenme kaynaðý açýsýndan yeterli doküman bulmayý hem de bir sorun yaþadýðýnýzda kolay bir þekilde yardým bulabileceðinizi göstermektedir.
+

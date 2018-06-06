@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Fonksiyonlar </title>
+
+    <link rel="stylesheet" href="main.css" />
+
+</head>
+
+<body>
+    <div id="logo"> </div>
+
+    <div class="navBar">
+        <ul>
+            <li><a href="index.html">Anasayfa</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">C++ Konuları</a>
+                 <div class="dropdown-content">
+                    <a href="basla.html">Başlangıç</a>
+                    <a href="veritip.html">Veri Tipleri</a>
+                    <a href="dongu.html">Döngüler</a>
+                    <a href="diziler.html">Diziler</a>
+                    <a href="fonksiyonlar.html">Fonksiyonlar</a>
+                    <a href="dislemleri.html">Dosya İşlemleri</a>
+                </div>
+            </li>
+            <li><a href="hakkimda.html">Hakkımda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+    </div>
+                <div id="content-main">
+            <h3>Fonksiyonlar</h3>
+    
+    <p class="info">Orta ve büyük ölçekli bir programda fonksiyonlar programın temel yapı taşıdır. C++ fonksiyonları, programın belirli işlemini gerçekletirir ve küme parantezi ‘{ }’ ile başlayıp sonlanır. Yani, programı fonksiyonlar oluşturur.</p>
+            
+            <ul class="info">
+                <li>C++ fonksiyonları bir program içerisinde tekrar tekrar aynı mantık içerisinde yeniden yazmamak için kullanılır</li>
+                <li>Gerekli her yerde aynı işlevi sağlayacak kodlar yazmamak için istenildiği kadar fonksiyonlar çağrılır ve kullanılır.</li>
+                <li>Fonksiyonlara ayrılmış büyük bir C++ programı kolayca anlaşılır, geliştirilir ve bakımı kolay olur.</li>
+                <li>Büyük bir işi yapan bir fonksiyon küçük fonksiyonlara ayrılarak temel görevlere ayrılabilir.</li>
+            </ul>
+               <h2>Basit Bir C++ Fonksiyon Örneği</h2>
+               
+               
+                  <table class="table-program">
+            <col class="col-line-number" />
+            <col class="col-program" />
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="text-right">
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre>
+                    </td>
+                    <td>
+                        <pre>
+<span class="color-comment">/*
+ * İki Sayiyi Toplayan Fonksiyon (<em>ToplamaFonksiyonOrnegi</em>.cpp)
+ */</span>
+<span class="color-include">#include &lt;iostream&gt; </span>
+
+<span class="bold">using namespace</span> std;
+
+<span class="bold">int</span> Topla<span class="color-red">(</span><span class="bold">int</span> sayi1<span class="color-red">,</span><span class="bold">int</span> sayi2<span class="color-red">) {</span><span class="color-comment"> // int türünden bir sonuç döndürmek istediğimiz için int yazdık </span>
+     <span class="bold">int</span> Sonuc <span class="color-red">=</span> sayi1 <span class="color-red">+</span> sayi2 <span class="color-red">;</span>
+     <span class="bold">return</span> Sonuc<span class="color-red">; <span class="color-comment"> // Bir değer döndürmemiz için return yazmamız gerekli</span>
+}</span>
+
+<span class="bold">int</span> main<span class="color-red">() {</span>
+<span class="bold">int</span> sayi <span class="color-red">=</span> Topla<span class="color-red">(</span>5<span class="color-red">,</span>3<span class="color-red">);</span> <span class="color-comment"> // 5 ile 3 ü parametre olarak gönderdik ve toplamasını istedik. Fonksiyon sonucu onu çağırdığımız yere geri döndürecek</span>
+cout <span class="color-red">&lt;&lt;</span><span class="color-boldblue">&quot; Sonuc : &quot;</span> <span class="color-red">&lt;&lt; </span> sayi <span class="color-red"> &lt;&lt;</span> endl <span class="color-red">;</span>
+return 0<span class="color-red">;                       
+}</span>                                                  
+                      </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+            <p class="info">Kodun Çıktısı: </p>    
+        <pre class="output">
+    Sonuc = 8  
+                    </pre>   
+                       
+<p class="info">Fonksiyonlar, main fonksiyonundan sonra da tanımlanabilir. Ancak bunun için main fonksiyonundan önce bazı temel tanımlamalar yapılması gerekir. Fonksiyonun türü,ismi ve aldığı parametrelerin belirtilmesi gerekir. Bu tanımlamalar yapıldıktan sonra artık main fonksiyonundan sonra detaylı bir şekilde fonksiyon yazılabilir.</p>                             
+                        
+                                 <table class="table-program">
+            <col class="col-line-number" />
+            <col class="col-program" />
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="text-right">
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre>
+                    </td>
+                    <td>
+                        <pre>
+<span class="color-comment">/*
+ * İki Sayiyi Toplayan Fonksiyon(Mainden Sonra) (<em>ToplamaFonksiyonOrnegiMS</em>.cpp)
+ */</span>
+<span class="color-include">#include &lt;iostream&gt; </span>
+
+<span class="bold">using namespace</span> std;
+
+<span class="bold">int</span> Topla<span class="color-red">(</span><span class="bold">int</span><span class="color-red"> , </span><span class="bold">int</span><span class="color-red">);</span>
+
+<span class="bold">int</span> main<span class="color-red">() {</span>
+<span class="bold">int</span> Islem <span class="color-red">=</span> Topla<span class="color-red">(</span>5<span class="color-red">,</span>3<span class="color-red">);</span>
+cout <span class="color-red">&lt;&lt;</span><span class="color-boldblue">&quot; Sonuc : &quot;</span> <span class="color-red">&lt;&lt; </span> Islem <span class="color-red"> &lt;&lt;</span> endl <span class="color-red">;</span>
+return 0<span class="color-red">;                       
+}</span>
+<span class="bold">int</span> Topla<span class="color-red">(</span><span class="bold">int</span> sayi1<span class="color-red">,</span><span class="bold">int</span> sayi2<span class="color-red">) {</span>
+<span class="bold">int</span> Sonuc <span class="color-red">=</span> sayi1 <span class="color-red">+</span> sayi2 <span class="color-red">;</span>
+<span class="bold">return</span> Sonuc<span class="color-red">; 
+}</span>                                                  
+                      </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+            <p class="info">Kodun Çıktısı: </p>    
+        <pre class="output">
+    Sonuc = 8  
+                    </pre>                  
+        
+        
+                                         <table class="table-program">
+            <col class="col-line-number" />
+            <col class="col-program" />
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="text-right">
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+</pre>
+                    </td>
+                    <td>
+                        <pre>
+<span class="color-comment">/*
+ * Girilen Sayının Faktöriyelini Bulan Fonksiyon(<em>FaktoriyelFonksiyon</em>.cpp)
+ */</span>
+<span class="color-include">#include &lt;iostream&gt; </span>
+
+<span class="bold">using namespace</span> std;
+
+<span class="bold">int</span> Faktoriyel<span class="color-red">(</span><span class="bold">int</span><span class="color-red">);</span>
+
+<span class="bold">int</span> main<span class="color-red">() {</span>
+
+cout<span class="color-red">&lt;&lt;</span><span class="color-boldblue">&quot; Faktoriyelini istediginiz sayi : &quot;</span><span class="color-red">;</span>
+<span class="bold">int </span> sayi <span class="color-red">=</span>0<span class="color-red">;</span>
+cin<span class="color-red">&gt;&gt;</span>sayi<span class="color-red">;</span>
+<span class="bold">int</span> Islem <span class="color-red">=</span> Faktoriyel<span class="color-red">(</span>sayi<span class="color-red">);</span>
+cout<span class="color-red">&lt;&lt;</span><span class="color-boldblue">&quot; Sonuc : &quot;</span><span class="color-red">&lt;&lt;</span> Islem<span class="color-red">;</span>
+return 0<span class="color-red">;
+}</span>
+
+<span class="bold">int</span> Faktoriyel<span class="color-red">(</span><span class="bold">int</span> GirilenSayi<span class="color-red">) {</span>
+<span class="bold">int</span> Sonuc <span class="color-red">=</span> 1<span class="color-red">;</span>
+<span class="bold">while</span><span class="color-red">(</span>GirilenSayi<span class="color-red">&gt;</span>1<span class="color-red">){</span>
+Sonuc <span class="color-red">*=</span> GirilenSayi<span class="color-red">;</span>
+GirilenSayi<span class="color-red">--;
+}</span>
+<span class="bold">return</span> Sonuc<span class="color-red">; 
+}</span>                                                  
+                      </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="info">Kodun Çıktısı: </p>    
+        <pre class="output">
+Faktoriyelini istediginiz sayi : <strong>5</strong>
+Sonuc : <strong>120</strong>       
+        </pre> 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+
+
+
+
+
+
+
+
+    <div class="footer">
+        <p> Tüm Hakları Saklıdır. Lütfen Kaynak Göstermeden Sitenizde Kullanmayınız. © 2017 - Nuri MÜLDÜR</p>
+    </div>
+
+</body>
+
+</html>

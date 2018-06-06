@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Döngüler </title>
+
+    <link rel="stylesheet" href="main.css" />
+
+</head>
+
+<body>
+    <div id="logo"> </div>
+
+    <div class="navBar">
+        <ul>
+            <li><a href="index.html">Anasayfa</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">C++ Konuları</a>
+                 <div class="dropdown-content">
+                    <a href="basla.html">Başlangıç</a>
+                    <a href="veritip.html">Veri Tipleri</a>
+                    <a href="dongu.html">Döngüler</a>
+                    <a href="diziler.html">Diziler</a>
+                    <a href="fonksiyonlar.html">Fonksiyonlar</a>
+                    <a href="dislemleri.html">Dosya İşlemleri</a>
+                </div>
+            </li>
+            <li><a href="hakkimda.html">Hakkımda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+    </div>
+  <div id="content-main">
+        
+        
+        <h3>Döngüler</h3>
+        <p class="info">Algoritma kurarken ve kod yazarken işimiz hızlandıracak ve kolaylaştıracak unsurlardan biride döngülerdir. Döngüler kontrol koşulu doğru olduğu  sürece dönmektedir. Kontrol koşulu sağlanmadığı taktirde döngüden çıkmaktadır.
+
+        C programlama dilinde 3 tip döngü vardır:</p>
+        <ul class="info">
+            <li>For</li>
+            <li>While</li>
+            <li>Do-While</li>
+        </ul>
+        
+        <h2>For Döngüsü</h2>
+        
+        <p class="info">for(Başlangıç,Koşul,Değişim)</p>
+        <p class="info"><span class="bold">Başlangıç:</span> Genellikle bir ya da daha çok tanımlanmış bir başlangıç değeridir. Döngünün başlayacağı değeri göstermektedir.</p>
+        <p class="info"><span class="bold">Koşul:</span> Burada koşul hesaplanır ve eğer koşul tutuyorsa değişim miktarına geçer. Eğer koşul tutmuyorsa döngüden çıkar.</p>
+        <p class="info"><span class="bold">Değişim:</span> Koşulun doğru olduğu sürece başlangıç değerinin değişim miktarını belirtmektedir.</p>
+                <table class="table-program">
+            <col class="col-line-number" />
+            <col class="col-program" />
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="text-right">
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre>
+                    </td>
+                    <td>
+                        <pre>
+<span class="color-comment">/*
+ * For döngüsü örneği (<em>ForDongusu</em>.cpp)
+ */</span>
+<span class="color-include">#include &lt;iostream&gt; </span>
+
+<span class="bold">using namespace</span> std;
+
+<span class="bold">int</span> main<span class="color-red">() {</span>
+<span class="bold">int</span> x<span class="color-red">;</span> <span class="color-comment"> // x adında int tipinde bir değişken</span>
+<span class="bold">int</span> i<span class="color-red">;</span> <span class="color-comment"> // i adında int tipinde bir değişken(Bu değer bizim döngü sayacımız olacak)</span>
+x<span class="color-red">=</span>0<span class="color-red">;</span> <span class="color-comment"> // x değişkenine bir değer atmak</span>
+<span class="bold">for</span><span class="color-red">(</span>i<span class="color-red">=</span>1<span class="color-red">;</span>i<span class="color-red">&lt;=</span>5<span class="color-red">;</span>i<span class="color-red">++</span><span class="color-red">){</span> <span class="color-comment"> // for döngüsü oluşturmak</span>
+cout <span class="color-red">&lt;&lt;</span> x <span class="color-red">&lt;&lt; </span><span class="color-boldblue">&quot;\n&quot;</span><span class="color-red"> &lt;&lt;</span> endl <span class="color-red">;</span> <span class="color-comment"> // x değişkenini ekrana yazdırmak</span>                  
+x<span class="color-red">=</span>x<span class="color-red">+</span>2<span class="color-red">;</span> <span class="color-comment"> // Döngü her çalıştığında x değişkenini 2 arttırmak</span>                 
+<span class="color-red">}</span>
+return 0<span class="color-red">;                       
+}</span>                                        
+                      </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <p class="info">Kodun Çıktısı: </p>    
+        <pre class="output">
+0
+2
+4
+6
+8                         
+       </pre>
+       <h2>While Döngüsü</h2>
+       <p class="info">İkinci döngü türümüz olan while döngüsü kullanış amacı olarak aslında for döngüsünden çok farklı olduğunu söyleyemeyiz. İçerideki koşul sağlandığı sürece döngü dönmektedir. Şöyle gösterecek olursak while(Koşul).</p>
+               <table class="table-program">
+            <col class="col-line-number" />
+            <col class="col-program" />
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="text-right">
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre>
+                    </td>
+                    <td>
+                        <pre>
+<span class="color-comment">/*
+ * While döngüsü örneği (<em>WhileDongusu</em>.cpp)
+ */</span>
+<span class="color-include">#include &lt;iostream&gt; </span>
+
+<span class="bold">using namespace</span> std;
+
+<span class="bold">int</span> main<span class="color-red">() {</span>
+<span class="bold">int</span> n<span class="color-red">;</span> <span class="color-comment"> // n adında int tipinde bir değişken</span>
+<span class="bold">int</span> toplam<span class="color-red">=</span>0<span class="color-red">;</span> <span class="color-comment"> // toplam adında int tipinde bir değişken ve ilk değeri 0</span>                  
+<span class="bold">int</span> kalan<span class="color-red">;</span> <span class="color-comment"> // kalan adında int tipinde bir değişken</span>
+           
+cout <span class="color-red">&lt;&lt;</span> <span class="color-boldblue">&quot;Bir Sayi Giriniz: &quot;</span><span class="color-red">;</span>  <span class="color-comment"> // Giriş istenmesi</span>
+cin <span class="color-red">&gt;&gt;</span> n<span class="color-red">;</span>                  <span class="color-comment"> // Girilen sayıyı n değişkenine atmak</span>
+
+<span class="bold">while </span><span class="color-red">(</span>n<span class="color-red">!=</span>0<span class="color-red">){</span> <span class="color-comment"> // n 0'a eşit değilse </span>                                             
+kalan<span class="color-red"> = </span>n<span class="color-red"> % </span>10<span class="color-red">;</span><span class=color-comment> // n değişkeninin mod10'unu alıp kalan değişkenine atmak</span>
+toplam<span class="color-red"> = </span>toplam<span class="color-red"> + </span>kalan<span class="color-red">;</span><span class="color-comment"> // toplam değişkeniyle kalan değişkenini toplayıp toplam değişkenine atmak</span>
+n<span class="color-red"> = </span>n<span class="color-red"> / </span>10<span class="color-red">;</span><span class="color-comment"> // n değişkenini 10 değerine bölüp n değişkenine atmak</span>        
+<span class="color-red">}</span>
+     
+cout <span class="color-red">&lt;&lt;</span> <span class="color-boldblue">&quot;Girilen Sayinin Basamaklar Toplami: &quot;</span> <span class="color-red">&lt;&lt;</span> toplam <span class="color-red">&lt;&lt;</span> endl<span class="color-red">;</span>  
+return 0<span class="color-red">;
+}</span>                                  
+                                           
+                                           
+                         </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+      <p class="info">Kodun Çıktısı: </p>    
+        <pre class="output">
+Bir Sayi Giriniz: <strong>123</strong>
+Girilen Sayinin Basamaklar Toplami: <strong>6</strong>                              </pre> 
+<h2>Do-While Döngüsü</h2>
+      <p class="info">Do-While döngüsünün while döngüsünden farkı, while döngüsü koşul doğru olduğu sürece yürütülür ama do-while döngüsü bir kez kontrol olmaksızın yürütülür sonra şart kontrol edilir.</p> 
+       
+            <table class="table-program">
+            <col class="col-line-number" />
+            <col class="col-program" />
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="text-right">
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre>
+                    </td>
+                    <td>
+                        <pre>
+<span class="color-comment">/*
+ * Do-While döngüsü örneği (<em>DoWhileDongusu</em>.cpp)
+ */</span>
+<span class="color-include">#include &lt;iostream&gt; </span>
+
+<span class="bold">using namespace</span> std;
+
+<span class="bold">int</span> main<span class="color-red">() {</span>
+<span class="bold">int</span> i<span class="color-red">=</span>1<span class="color-red">;</span> <span class="color-comment"> // i adında int tipinde bir değişken ve ilk değeri 1</span>
+
+<span class="bold">do</span><span class="color-red">{</span>
+
+cout <span class="color-red">&lt;&lt;</span> <span class="color-boldblue">&quot;i'nin değeri: &quot;</span> <span class="color-red">&lt;&lt;</span> i <span class="color-red">&lt;&lt;</span> endl<span class="color-red">;</span>
+i<span class="color-red">++;
+
+}</span><span class="bold">while</span><span class="color-red">(</span>i<span class="color-red">&lt;=</span>4 <span class="color-red">&&</span> i<span class="color-red">&gt;=</span>2<span class="color-red">);</span>
+return 0<span class="color-red">;
+}</span>                   
+                   </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="info">Kodun Çıktısı</p>
+<pre class="output">
+i'nin değeri: <strong>1</strong>
+i'nin değeri: <strong>2</strong>
+i'nin değeri: <strong>3</strong>
+i'nin değeri: <strong>4</strong></pre>       
+       
+        
+        
+        
+        
+    </div>
+    <div class="footer">
+        <p> Tüm Hakları Saklıdır. Lütfen Kaynak Göstermeden Sitenizde Kullanmayınız. © 2017 - Nuri MÜLDÜR</p>
+    </div>
+
+</body>
+
+</html>

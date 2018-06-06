@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Diziler </title>
+
+    <link rel="stylesheet" href="main.css" />
+
+</head>
+
+<body>
+    <div id="logo"> </div>
+
+    <div class="navBar">
+        <ul>
+            <li><a href="index.html">Anasayfa</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">C++ Konuları</a>
+                 <div class="dropdown-content">
+                    <a href="basla.html">Başlangıç</a>
+                    <a href="veritip.html">Veri Tipleri</a>
+                    <a href="dongu.html">Döngüler</a>
+                    <a href="diziler.html">Diziler</a>
+                    <a href="fonksiyonlar.html">Fonksiyonlar</a>
+                    <a href="dislemleri.html">Dosya İşlemleri</a>
+                </div>
+            </li>
+            <li><a href="hakkimda.html">Hakkımda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+    </div>
+        <div id="content-main">
+       <h3>Diziler </h3>
+       
+        <p class="info">C++ dilinde diziler, aynı veri tipindeki değişkenlerin toplandığı yapılar olarak adlandırılır.</p>
+        <ul class="info">
+            <li>Diziler  herhangi bir veri tipinde oluşturulabilir.</li>
+            <li>Dizi boyutu sabit bir değer olmalıdır.</li>
+            <li>Dizi elemanları daima bellekte bitişik adres yerlerine yazılır.</li>
+        </ul>    
+        <table class="table-program">
+            <col class="col-line-number" />
+            <col class="col-program" />
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="text-right">
+1
+2
+
+</pre>
+                    </td>
+                    <td>
+                        <pre>
+<span class="bold">int</span> a<span class="color-red">[</span>10<span class="color-red">];</span> <span class="color-comment"> // integer(tam sayi) tipinde bir dizi</span>
+<span class="bold">char</span> b<span class="color-red">[</span>10<span class="color-red">];</span> <span class="color-comment"> // char(karakter) tipinde bir dizi</span>
+                   </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+<h2>C++ Dilinde Dizi Tipleri</h2>  
+       <ul class="info">
+           <li>Tek Boyutlu Diziler</li>
+           <li>Çok Boyutlu Diziler</li>
+       </ul>
+<h3>1.Tek Boyutlu Diziler</h3>
+       <p class="info">
+           <span class="bold">Dizi tanımlaması söz dizimi: </span>veriTipi diziAdi[diziBoyutu]; </p> 
+        <table class="table-program">
+            <col class="col-line-number" />
+            <col class="col-program" />
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="text-right">
+1
+2
+
+</pre>
+                    </td>
+                    <td>
+                        <pre>
+<span class="bold">int</span> yas<span class="color-red">[</span>5<span class="color-red">];</span> 
+<span class="bold">char</span> str<span class="color-red">[</span>10<span class="color-red">];</span> 
+                   </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+           <p class="info">
+            <span class="bold">Diziye ilk değer ataması sözdizimi: </span>veriTipi diziAdi[diziBoyutu]={deger1,deger2};
+      </p>
+        <table class="table-program">
+            <col class="col-line-number" />
+            <col class="col-program" />
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="text-right">
+1
+2
+
+</pre>
+                    </td>
+                    <td>
+                        <pre>
+<span class="bold">int</span> yas<span class="color-red">[</span>5<span class="color-red">]={</span>0<span class="color-red">,</span>1<span class="color-red">,</span>2<span class="color-red">,</span>3<span class="color-red">,</span>4<span class="color-red">,</span>5<span class="color-red">};</span> 
+<span class="bold">char</span> str<span class="color-red">[</span>3<span class="color-red">]={</span>'a'<span class="color-red">,</span>'b'<span class="color-red">,</span>'c'<span class="color-red">};</span>
+                   </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>   
+            <p class="info"><span class="bold">Diziye erişim sözdizimi:</span> diziAdi[indis];</p>        
+                <table class="table-program">
+            <col class="col-line-number" />
+            <col class="col-program" />
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="text-right">
+1
+2
+
+</pre>
+                    </td>
+                    <td>
+                        <pre>
+<span class="bold">int</span> yas<span class="color-red">[</span>0<span class="color-red">];</span> <span class="color-comment"> //ilk indisi gösterir.</span> 
+<span class="bold">char</span> str<span class="color-red">[</span>6<span class="color-red">];</span> <span class="color-comment"> // altıncı indisi gösterir.</span>
+                   </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="info"><span class="bold">Tek Boyutlu Dizi Örneği</span></p>
+         <table class="table-program">
+            <col class="col-line-number" />
+            <col class="col-program" />
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="text-right">
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre>
+                    </td>
+                    <td>
+                        <pre>
+<span class="color-comment">/*
+ * Dizi Elemanlarını Yazdırma (<em>DiziElemanYazdirma</em>.cpp)
+ */</span>
+<span class="color-include">#include &lt;iostream&gt; </span>
+
+<span class="bold">using namespace</span> std;
+
+<span class="bold">int</span> main<span class="color-red">() {</span>
+<span class="bold">int</span> a<span class="color-red">[</span>6<span class="color-red">]={</span>0<span class="color-red">,</span>1<span class="color-red">,</span>2<span class="color-red">,</span>3<span class="color-red">,</span>4<span class="color-red">,</span>5<span class="color-red">};</span> <span class="color-comment"> // dizi tanımlaması</span>
+
+<span class="bold">for</span><span class="color-red">(</span><span class="bold">int</span> i<span class="color-red">=</span>0<span class="color-red">;</span>i<span class="color-red">&lt;=</span>6<span class="color-red">;</span>i<span class="color-red">++</span><span class="color-red">){</span> 
+
+cout <span class="color-red">&lt;&lt;</span><span class="color-boldblue">&quot;Dizinin&quot;</span> <span class="color-red">&lt;&lt;</span> i+1<span class="color-red">&lt;&lt;</span><span class="color-boldblue"> &quot;. elemani: &quot; </span><span class="color-red">&lt;&lt;</span> a<span class="color-red">[</span>i<span class="color-red">]</span> <span class="color-red">&lt;&lt;</span> endl<span class="color-red">;</span> <span class="color-comment"> // dizi elemanları ekrana yazdırılıyor</span> 
+<span class="color-red">}</span>
+return 0<span class="color-red">;                       
+}</span>                                        
+                      </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+       
+<p class="info">Kodun Çıktısı: </p>    
+        <pre class="output">
+Dizinin 1. elemani : 0
+Dizinin 2. elemani : 1
+Dizinin 3. elemani : 2
+Dizinin 4. elemani : 3
+Dizinin 5. elemani : 4
+Dizinin 6. elemani : 5                              
+       </pre>    
+    <h3>1.İki Boyutlu Diziler</h3>
+    
+    <p class="info">
+           <span class="bold">Dizi tanımlaması söz dizimi: </span>veriTipi diziAdi[satirBoyutu][sutunBoyutu]; </p> 
+    
+    <table class="table-program">
+            <col class="col-line-number" />
+            <col class="col-program" />
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="text-right">
+1
+
+</pre>
+                    </td>
+                    <td>
+                        <pre>
+<span class="bold">int</span> dizi<span class="color-red">[</span>5<span class="color-red">]</span><span class="color-red">[</span>5<span class="color-red">];</span> 
+                   </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+           <p class="info">
+            <span class="bold">Diziye ilk değer ataması sözdizimi: </span>veriTipi diziAdi[2][2]={{0,0},{0,1},{1,0},{1,1}};
+      </p>
+        <table class="table-program">
+            <col class="col-line-number" />
+            <col class="col-program" />
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="text-right">
+1
+
+</pre>
+                    </td>
+                    <td>
+                        <pre>
+<span class="bold">int</span> dizi<span class="color-red">[</span>2<span class="color-red">]</span><span class="color-red">[</span>2<span class="color-red">]={</span>1<span class="color-red">,</span>2<span class="color-red">,</span>3<span class="color-red">,</span>4<span class="color-red">};</span>
+                   </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>   
+            <p class="info"><span class="bold">Diziye erişim sözdizimi:</span> diziAdi[satir_indisi][sutun_indisi];</p>        
+                <table class="table-program">
+            <col class="col-line-number" />
+            <col class="col-program" />
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="text-right">
+1
+
+</pre>
+                    </td>
+                    <td>
+                        <pre>
+<span class="bold">int</span> dizi<span class="color-red">[</span>1<span class="color-red">][</span>2<span class="color-red">];</span> <span class="color-comment"> //1.satir 2.sutundaki indisi gösterir.</span> 
+                   </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+   <p class="info"><span class="bold">İki Boyutlu Dizi Örneği</span></p>
+         <table class="table-program">
+            <col class="col-line-number" />
+            <col class="col-program" />
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="text-right">
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre>
+                    </td>
+<td>
+                        <pre>
+<span class="color-comment">/*
+ * İki Boyutlu Dizi Elemanlarını Yazdırma (<em>İkiBoyutluDiziElemanYazdirma</em>.cpp)
+ */</span>
+<span class="color-include">#include &lt;iostream&gt; </span>
+
+<span class="bold">using namespace</span> std;
+
+<span class="bold">int</span> main<span class="color-red">() {</span>
+<span class="bold">int</span> dizi<span class="color-red">[</span>2<span class="color-red">][</span>2<span class="color-red">]={</span><span class="color-red">{</span>2<span class="color-red">,</span>4<span class="color-red">},{</span>3<span class="color-red">,</span>5<span class="color-red">}</span><span class="color-red">};</span> <span class="color-comment"> // dizi tanımlaması</span>
+
+<span class="bold">for</span><span class="color-red">(</span><span class="bold">int</span> i<span class="color-red">=</span>0<span class="color-red">;</span>i<span class="color-red">&lt;</span>2<span class="color-red">;</span>i<span class="color-red">++</span><span class="color-red">){</span>
+
+   <span class="bold">for</span><span class="color-red">(</span><span class="bold">int</span> j<span class="color-red">=</span>0<span class="color-red">;</span>j<span class="color-red">&lt;</span>2<span class="color-red">;</span>j<span class="color-red">++</span><span class="color-red">){</span> 
+
+cout <span class="color-red">&lt;&lt;</span><span class="color-boldblue">&quot;Dizinin&quot;</span> <span class="color-red">&lt;&lt;</span> i <span class="color-red">&lt;&lt;</span><span class="color-boldblue"> &quot;x&quot; </span><span class="color-red">&lt;&lt;</span> j <span class="color-red">&lt;&lt;</span><span class="color-boldblue"> &quot;indisli elemani: &quot; </span><span class="color-red">&lt;&lt;</span> dizi<span class="color-red">[</span>i<span class="color-red">][</span>j<span class="color-red">]</span> <span class="color-red">&lt;&lt;</span> endl<span class="color-red">;</span> <span class="color-comment"> // dizi elemanları ekrana yazdırılıyor</span> 
+<span class="color-red">} }</span>
+return 0<span class="color-red">;                       
+}</span>                                        
+                      </pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <p class="info">Kodun Çıktısı: </p>    
+        <pre class="output">
+Dizinin 0x0 indisli elemani: 2
+Dizinin 0x1 indisli elemani: 4
+Dizinin 1x0 indisli elemani: 3
+Dizinin 1x1 indisli elemani: 5                              
+       </pre>    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    </div>      
+    
+
+
+
+
+
+
+
+    <div class="footer">
+        <p> Tüm Hakları Saklıdır. Lütfen Kaynak Göstermeden Sitenizde Kullanmayınız. © 2017 - Nuri MÜLDÜR</p>
+    </div>
+
+</body>
+
+</html>
